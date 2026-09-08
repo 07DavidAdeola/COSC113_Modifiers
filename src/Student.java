@@ -1,14 +1,21 @@
 public class Student {
 
-    String FN;
-    String LN;
-    int Sid;
+    // All the attributes should be private
+    public String FN;
+    public String LN;
+    public int Sid;
+    //   public double gpa;
+
+    // Concept - Encapsulation = Controlling the access of attributes and methods
+    private double gpa;
+
 
     // How many parameters = 0
     Student(){
         this.FN = "No first name";
         this.LN = "No last name";
         this.Sid = 0;
+        this.gpa = 0.0;
     }
 
     // Methods = Getters and Setters
@@ -36,62 +43,16 @@ public class Student {
         Sid = sid;
     }
 
-
-//    Student(String FN, String LN){
-//        this.FN = FN;
-//        this.LN = LN;
-//}
-
-
-    Student(String FN, String LN){
-        this.FN = FN;
-        this.LN = LN;
+    public double getGpa() {
+        return gpa;
     }
 
-
-    // How many parameters = 3
-    Student(String FN, String LN, int Sid){
-//        this.FN = FN;
-//        this.LN = LN;
-        this(FN,LN);
-        this.Sid = Sid;
-    }
-
-
-    // You can create overloaded constructors by varying 1) the parameter number,2) order
-    public static void main(String[] args) {
-
-        Student s6 = new Student();
-        // Setting names
-        s6.FN = "Melanie";
-        s6.SetLN("Thomas");
-        s6.LN = "Simpson";
-
-        Student s4 = new Student("Helena", "Payton");
-        System.out.println(s4.FN);
-        System.out.println(s4.LN);
-        System.out.println(s4.Sid);
-        System.out.println("---------------------");
-        // Variable s1 is of Student type
-        Student s1;
-        s1 = new Student();
-        System.out.println(s1);
-        System.out.println(s1.FN);
-
-        Student s2;
-        s2 = new Student("Tobiloba", "Ayodeji", 14141);
-        System.out.println(s2.FN);
-        System.out.println(s2.LN);
-
-        Student s3;
-        String FN = "Miguel";
-        String LN = "Gascortega";
-        int Sid = 31415;
-        s3 = new Student(FN, LN, Sid);
-        System.out.println(s3.FN);
-        System.out.println(s3.LN);
-
-        Student s5;
-        s5 = new Student(FN, LN, Sid);
+    public void setGpa(double gpa) {
+//        this.gpa = gpa;
+        if (gpa >= 0.0 && gpa <= 4.0) {
+            this.gpa = gpa;
+        } else {
+            System.out.println("Invalid GPA value");
+        }
     }
 }
