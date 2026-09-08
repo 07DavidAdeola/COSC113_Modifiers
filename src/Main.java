@@ -19,17 +19,6 @@ public class Main {
 
 
 
-
-
-
-
-    // You can create overloaded constructors by varying 1) the parameter number,2) order
-
-//        Student s8;
-//        s8= new Student();
-//        s8.gpa = 4.0;
-//        s8.gpa = -3.1;
-
         // Code from Sept 3rd
         Student s6 = new Student();
         // Setting names
