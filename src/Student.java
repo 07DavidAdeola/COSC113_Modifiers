@@ -1,9 +1,9 @@
 public class Student {
 
     // All the attributes should be private
-    public String FN;
-    public String LN;
-    public int Sid;
+    private String FN;
+    private String LN;
+    private int Sid;
     //   public double gpa;
 
     // Concept - Encapsulation = Controlling the access of attributes and methods
@@ -18,13 +18,37 @@ public class Student {
         this.gpa = 0.0;
     }
 
+    //    Student(String FN, String LN){
+//        this.FN = FN;
+//        this.LN = LN;
+//}
+
+
+    Student(String FN, String LN){
+        this.FN = FN;
+        this.LN = LN;
+    }
+
+
+    // How many parameters = 3
+    Student(String FN, String LN, int Sid){
+//        this.FN = FN;
+//        this.LN = LN;
+        this(FN,LN);
+        this.Sid = Sid;
+    }
+
     // Methods = Getters and Setters
     public String getFN() {
         return FN;
     }
 
+
     public void setFN(String FN) {
         this.FN = FN;
+
+//        this.gpa = 3.5;
+        this.setGpa(3.8);
     }
 
     public String getLN() {
