@@ -3,6 +3,8 @@
 /* Access modifiers are applicable to attributes, constructors, setters and getters, methods*/
 // public = accessible from Everywhere
 // private = accessible from inside the class
+https://github.com/07DavidAdeola/COSC113_Modifiers.git
+
 public class Main {
     public String Test;
     protected int Test_int;
