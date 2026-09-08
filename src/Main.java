@@ -4,6 +4,30 @@
 // public = accessible from Everywhere
 // private = accessible from inside the class
 public class Main {
+    public String Test;
+    protected int Test_int;
+    private double Test_double;
+    boolean Test_boolean;
+
+    Main(){}
+
+    public Main(String Teet){
+        this.Test = Test;
+    }
+
+    private Main(String Test,double Test_double){
+        this.Test = Test;
+        this.Test_double = Test_double;
+    }
+
+    public void main() {
+        System.out.println("Hello Main!");
+    }
+
+        public void main(String args){
+            System.out.println("Hello Main!");
+    }
+
     // You can create overloaded constructors by varying 1) the parameter number,2) order
     public static void main( String[] args){
         Student s8, s9,s10;
